@@ -23,7 +23,7 @@ var (
 )
 
 func (s *ResizeCropHandler) init() error {
-	if s.initialized {
+	if !s.initialized {
 		if err := s.getConfig(); err != nil {
 			return err
 		}

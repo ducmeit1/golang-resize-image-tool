@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const MatchOptionalPattern = "^(?P<optional>(?P<dimension>[\\d]{1,4}x[\\d]{1,4})\\_?(P<crop>top|bottom|center|left|right)*\\_)(?P<file>[a-zA-Z-_0-9]+\\.(?P<ext>jpg|png|gif|jpeg))$"
+const MatchOptionalPattern = "^(?P<optional>(?P<dimension>[\\d]{1,4}x[\\d]{1,4})\\_?(?P<crop>top|bottom|center|left|right)*\\_)(?P<file>[a-zA-Z-_0-9]+\\.(?P<ext>jpg|png|gif|jpeg))$"
 
 const (
 	JPG  Extension = ".jpg"

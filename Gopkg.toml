@@ -28,9 +28,9 @@
   name = "github.com/aws/aws-lambda-go"
   version = "1.10.0"
 
-#[[constraint]]
-#  name = "github.com/aws/aws-sdk-go"
-#  version = "1.19.5"
+[[constraint]]
+  name = "github.com/aws/aws-sdk-go"
+  version = "1.19.5"
 
 [[constraint]]
  branch = "master"

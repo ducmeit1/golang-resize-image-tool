@@ -2,6 +2,7 @@ package model
 
 import (
 	"bytes"
+	"fmt"
 	"github.com/ducmeit1/imaging"
 	"image"
 	"regexp"
@@ -90,7 +91,7 @@ func (s *Image) IsMatchFormat() bool {
 	return true
 }
 
-func (s *Image) GetFileName() string {
+func (s *Image) GetOutputFileName() string {
 	names := make([]string, 0)
 	names = append(names, s.Dimension)
 	if s.Crop != "" {
@@ -139,6 +140,24 @@ func ParseCropOption(option CropOption) (anchor imaging.Anchor) {
 	return
 }
 
+func ParseContentType(ext Extension) (contentType string) {
+	switch ext {
+	case JPG:
+		contentType = "image/jpeg"
+		break
+	case JPEG:
+		contentType = "image/jpeg"
+		break
+	case PNG:
+		contentType = "image/png"
+		break
+	case GIF:
+		contentType = "image/gif"
+		break
+	}
+	return
+}
+
 // ResizeOrCrop
 func (s *Image) ResizeOrCrop(img image.Image) (residedImage *image.NRGBA) {
 	if s.Crop == "" {
@@ -147,4 +166,8 @@ func (s *Image) ResizeOrCrop(img image.Image) (residedImage *image.NRGBA) {
 		residedImage = imaging.CropAnchor(img, s.Width, s.Height, ParseCropOption(s.Crop))
 	}
 	return
+}
+
+func (s *Image) GetS3Key(folder string, key string) string {
+	return fmt.Sprintf("%s/%s", folder, key)
 }

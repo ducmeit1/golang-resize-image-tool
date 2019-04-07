@@ -1,5 +1,10 @@
 package main
 
-func main() {
+import (
+	"github.com/aws/aws-lambda-go/lambda"
+	"resize-image-tool/handlers"
+)
 
+func main() {
+	lambda.Start(new(handlers.GatewayHandler).ServeHTTP)
 }

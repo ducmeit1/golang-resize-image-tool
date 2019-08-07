@@ -4,4 +4,4 @@
 
 > This tutorial has reference from tutorial of AWS at: https://aws.amazon.com/blogs/compute/resize-images-on-the-fly-with-amazon-s3-aws-lambda-and-amazon-api-gateway/
 
-#### Tutorial at: https://engineering.beeketing.com/build-a-resize-images-tool-with-aws-at-golang/
+#### Tutorial at: https://medium.com/@ducmeit

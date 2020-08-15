@@ -1,7 +1,15 @@
-> On ShopBase (a new product of BGroup will be released soon on mid of April 2019), a dropship, pod made easy service with an aim to help millions Vietnamese's merchant go to the global market, we have made some great tool for help user build their website faster and easier. Experience of the user is really important when they first come to your website, so the first sight and make them feel impressive that is the beautiful's website that you made. Besides that, the speed of loading contents of the website is also important too. The factor usually makes the website slowly that is static files, and the image is one of them. For solving this problem, we should resize or zip the image after they upload into the storage server. After resize or zip we also make sure the quality of the image was not changed too much. I mean, we must let the quality around from 85 - 95 percent from the original image.
+# Golang Resize Image Tool
 
-#### So, in this tutorial, I would like to guide you how make a simple resize images tool with AWS S3, Lambda and API Gateway.
+## Introduction
+This repository contains the code will helps you build resizing images serverless with AWS Lambda.
+The tutorial was posted at: https://medium.com/@ducmeit/build-a-resize-images-tool-with-aws-s3-lambda-api-gateway-at-golang-7569c72c3e8a
 
-> This tutorial has reference from tutorial of AWS at: https://aws.amazon.com/blogs/compute/resize-images-on-the-fly-with-amazon-s3-aws-lambda-and-amazon-api-gateway/
+## Usages
 
-#### Tutorial at: https://medium.com/@ducmeit
+Easy resize a picture on the fly with:
+
+https://your-end-point/folder/heightxwidth_crop_name-of-image.ext
+
+For example:
+
+https://kb2sf4lrd3.execute-api.ap-southeast-1.amazonaws.com/production/600x600_center_beeketing.jpg
